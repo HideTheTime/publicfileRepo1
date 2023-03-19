@@ -1,1 +1,1 @@
-console.log(`hello`)
+require("rollup-ts-browser")
