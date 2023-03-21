@@ -1,0 +1,15 @@
+.winput {
+	background-color: rgba(0, 122, 188, 0);
+	backdrop-filter: blur(20px);
+
+	border: 1px solid #5fe9f34e;
+	/* width: 200px;
+		height: 100px; */
+	padding: 20px;
+	font-family: "思源黑体";
+	font-size: 14px;
+	min-width: 300px;
+	border-radius: 12px;
+	color: white;
+	z-index: 1000;
+}
