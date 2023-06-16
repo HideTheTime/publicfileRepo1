@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: "思源黑体 CN", "hack NF";
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+// ::-webkit-scrollbar {
+// 	@apply w-2 bg-blue-400;
+// }
+
+::-webkit-scrollbar {
+	// overflow: hidden; /* 或者 scroll */
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	background-color: rgba(0, 0, 0, 0);
+	// color: blue;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 9999px;
+	height: 5px;
+	background-color: rgb(155, 155, 244);
+}
+
+.fcc {
+	@apply flex justify-center items-center;
+}
+
+button {
+
+	@apply border rounded-lg p-2
+}
+
+a {
+}
+
+svg {
+	@apply text-center inline;
+	color: white;
+}
+
+ul {
+	@apply flex flex-col;
+	li {
+		@apply flex space-x-2;
+	}
+}
+// .zhezhao {
+// 	@apply backdrop-blur-3xl bg-black bg-opacity-10 ring-1 ring-black ring-opacity-10 rounded-xl p-10;
+// 	position: fixed;
+// 	box-sizing: border-box;
+
+// 	top: 0%;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: -1;
+// }
