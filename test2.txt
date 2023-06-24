@@ -1,0 +1,12 @@
+hello
+hello
+hello hello
+require("rollup-ts-browser")
+hello
+hello
+hello hello
+require("rollup-ts-browser")
+hello
+hello
+hello hello
+require("rollup-ts-browser")
