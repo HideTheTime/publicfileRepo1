@@ -17,7 +17,8 @@ jobs:
         run: echo Hello build.yaml
 
       - name: Setup Docker
-        uses: actions/docker/setup-docker@v2
+        uses: docker-practice/actions-setup-docker@master
+        timeout-minutes: 12
 
       - run: echo 2
       - run: echo node -v
