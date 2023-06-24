@@ -1,15 +1,7 @@
-print_age(){
-    typeset -i num=$1
-
-    echo "Your age is $1"
+gitpush(){
+    git add .
+    git commit -m "update from shell"
+    git push
 }
 
-
-print_age $1
-# Your age is 30
-
-clone(){
-    echo kelong
-}
-
-clone
+gitpush
