@@ -15,8 +15,10 @@ jobs:
           node-version: 18.x
       - name: learn workflows
         run: echo Hello build.yaml
+
       - name: Setup Docker
         uses: actions/docker/setup-docker@v2
+
       - run: echo 2
       - run: echo node -v
       - run: |
