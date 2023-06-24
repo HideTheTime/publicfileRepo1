@@ -7,22 +7,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: "Checkout code"
         uses: actions/checkout@v2
-      - name: Set up Node.js
+      - name: "Set up Node.js"
         uses: actions/setup-node@v2
         with:
-          node-version: 18.x
-      - name: learn workflows
-        run: echo Hello build.yaml
-
-      - name: Setup Docker
+          node-version: 20
+      - name: 输出测试一下
+        run: "echo Hello build.yaml"
+      - name: 安装docker服务
         uses: docker-practice/actions-setup-docker@master
         timeout-minutes: 12
-
-      - run: echo 2
-      - run: echo node -v
-      - run: |
+      - name: 输出node版本测试是否成功
+        run: "echo node -v"
+      - name: 测试docker是否安装
+        run: |
           docker pull zxc731618920/english_app
-          docker ps
           docker version
+          docker ps
+          docker images
