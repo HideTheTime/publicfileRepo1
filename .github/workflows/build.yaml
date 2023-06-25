@@ -21,6 +21,20 @@ jobs:
           NB1: ${{ secrets.NB1 }}
         run: echo $NB1
 
+  learn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: 测试if语句
+        env:
+          HOME1: home_env1231231232
+        if: ${{ 1<2 }}
+        run: |
+          touch index.txt
+          echo "${{ secrets.NB1 }}" > index.txt
+          echo $HOME1
+          cat index.txt
       # - name: Install dependencies
       #   run: npm install
 
