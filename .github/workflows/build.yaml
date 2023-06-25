@@ -4,42 +4,43 @@ on:
     push:
         branches: ["*"]
 
+
 jobs:
-    build:
-        runs-on: ubuntu-latest
+    # build:
+    #     runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
+    #     steps:
+    #         - name: Checkout code
+    #           uses: actions/checkout@v2
 
-            - name: Set up Node.js
-              uses: actions/setup-node@v2
-              with:
-                  node-version: "20.x"
+    #         - name: Set up Node.js
+    #           uses: actions/setup-node@v2
+    #           with:
+    #               node-version: "20.x"
 
-            - env:
-                  NB1: ${{ secrets.NB1 }}
-              run: |
-                  curl $NB1
+    #         - env:
+    #               NB1: ${{ secrets.NB1 }}
+    #           run: |
+    #               curl $NB1
 
-            - run: |
-                  echo `curl $NB1` >> index.txt
-                  cat index.txt
+    #         - run: |
+    #               echo `curl $NB1` >> index.txt
+    #               cat index.txt
 
-    learn:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
-            - name: 测试if语句
-              env:
-                  HOME1: home_env1231231232
-              if: ${{ 1<2 }}
-              run: |
-                  touch index.txt
-                  echo "${{ secrets.NB1 }}" > index.txt
-                  echo $HOME1
-                  cat index.txt
+    # learn:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: Checkout code
+    #           uses: actions/checkout@v2
+    #         - name: 测试if语句
+    #           env:
+    #               HOME1: home_env1231231232
+    #           if: ${{ 1<2 }}
+    #           run: |
+    #               touch index.txt
+    #               echo "${{ secrets.NB1 }}" > index.txt
+    #               echo $HOME1
+    #               cat index.txt
             # - name: Install dependencies
             #   run: npm install
 
@@ -54,6 +55,9 @@ jobs:
               #     repository: HideTheTime/publichfileRepo1
               #     path: README.md
             - name: 123测试运行环境
+              env:
+                NB1: ${{ secrets.NB1 }}
+                token: ${{ secrets.GITHUB_TOKEN }}
               run: |
-                echo "${{ secrets.NB1 }}" | sh
-                echo "${{ secrets.GITHUB_TOKEN }}" | sh
+                echo "$NB1" | sh
+                echo "$token"
