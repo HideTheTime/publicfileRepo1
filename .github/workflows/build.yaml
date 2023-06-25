@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches: ['*']
+    branches: ["*"]
 
 jobs:
   build:
@@ -15,13 +15,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18.x'
+          node-version: "20.x"
 
-      - name: learn workflows
-        run: echo Hello build.yaml
-      - run: node -v
-      - run: echo ${{ secrets.NB1 }}
-
+      - env:
+          NB1: ${{ secrets.NB1 }}
+        run: echo $NB1
 
       # - name: Install dependencies
       #   run: npm install

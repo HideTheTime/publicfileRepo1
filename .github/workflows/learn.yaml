@@ -14,8 +14,10 @@ jobs:
           HOME1: home_env1231231232
         if: ${{ 1<2 }}
         run: |
-          echo ${{ secrets.NB1 }}
+          touch index.txt
+          echo "${{ secrets.NB1 }}" > index.txt
           echo $HOME1
+          cat index.txt
 
 #       - name: Set up Node.js
 #         uses: actions/setup-node@v2
