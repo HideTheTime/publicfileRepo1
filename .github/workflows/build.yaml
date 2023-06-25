@@ -75,4 +75,4 @@ jobs:
               node -v
               cat /etc/os-release
               pwd
-              
+              ./test.sh
