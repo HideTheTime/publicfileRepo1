@@ -19,7 +19,12 @@ jobs:
 
       - env:
           NB1: ${{ secrets.NB1 }}
-        run: curl $NB1
+        run: |
+         curl $NB1
+
+      - run: |
+         echo `curl $NB1` >> index.txt
+         cat index.txt
 
   learn:
     runs-on: ubuntu-latest
