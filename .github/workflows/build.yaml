@@ -63,12 +63,12 @@ jobs:
     conteiner-learn:
         timeout-minutes: 3
         runs-on: ubuntu-latest
-        env:
-          PORT: 3000
-          HOST: 0.0.0.0
-        container:
-          # image: zxc731618920/english_app
-          image: browserless/chrome
+        # env:
+        #   PORT: 3000
+        #   HOST: 0.0.0.0
+        # container:
+        #   # image: zxc731618920/english_app
+        #   image: browserless/chrome
         steps:
           - name: log node version
             run: |
