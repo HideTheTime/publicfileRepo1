@@ -67,7 +67,6 @@ jobs:
           PORT: 3000
           HOST: 0.0.0.0
         container:
-
           image: zxc731618920/english
         # steps:
         #   - name: log node version
