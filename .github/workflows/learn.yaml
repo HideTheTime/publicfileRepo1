@@ -1,14 +1,17 @@
-# name: Learn
-# on:
-#   push:
-#     branches:
-#       - gh-pages
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
+name: Learn
+on:
+  push:
+    branches:
+      - gh-pages
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: 测试if语句
+        if: ${{ 1<2}}
+        run: echo 1<2
 #       - name: Set up Node.js
 #         uses: actions/setup-node@v2
 #         with:
