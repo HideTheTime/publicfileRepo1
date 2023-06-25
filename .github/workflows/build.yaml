@@ -71,6 +71,10 @@ jobs:
         #   image: browserless/chrome
         steps:
           - name: log node version
+            uses: node
+            with:
+              entrypoint: ./test.sh
+          - name : command
             run: |
               node -v
               cat /etc/os-release
