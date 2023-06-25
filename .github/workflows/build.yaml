@@ -61,11 +61,16 @@ jobs:
                   echo "${NB1}"
                   echo "${token}"
     conteiner-learn:
+        timeout-minutes: 3
         runs-on: ubuntu-latest
+        env:
+          PORT: 3000
+          HOST: 0.0.0.0
         container:
-          image: node:13.5.0-alpine3.10
-        steps:
-          - name: log node version
-            run: |
-              node -v
-              cat /etc/os-release
+
+          image: zxc731618920/english
+        # steps:
+        #   - name: log node version
+        #     run: |
+        #       node -v
+        #       cat /etc/os-release
