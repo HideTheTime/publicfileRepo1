@@ -4,7 +4,6 @@ on:
     push:
         branches: ["*"]
 
-
 jobs:
     # build:
     #     runs-on: ubuntu-latest
@@ -41,11 +40,11 @@ jobs:
     #               echo "${{ secrets.NB1 }}" > index.txt
     #               echo $HOME1
     #               cat index.txt
-            # - name: Install dependencies
-            #   run: npm install
+    # - name: Install dependencies
+    #   run: npm install
 
-            # - name: Build project
-            #   run: npm run build
+    # - name: Build project
+    #   run: npm run build
     checkout:
         runs-on: ubuntu-latest
         steps:
@@ -56,8 +55,17 @@ jobs:
               #     path: README.md
             - name: 123测试运行环境
               env:
-                NB1: ${{ secrets.NB1 }}
-                token: ${{ secrets.GITHUB_TOKEN }}
+                  NB1: ${{ secrets.NB1 }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
               run: |
-                echo "${NB1}"
-                echo "${token}"
+                  echo "${NB1}"
+                  echo "${token}"
+    容器学习:
+        runs-on: ubuntu-latest
+        container:
+          image: node:13.5.0-alpine3.10
+        steps:
+          - name: log node version
+            run: |
+              node -v
+              cat /etc/os-release
