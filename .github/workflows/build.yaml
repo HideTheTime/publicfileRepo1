@@ -67,9 +67,12 @@ jobs:
           PORT: 3000
           HOST: 0.0.0.0
         container:
-          image: zxc731618920/english_app
+          # image: zxc731618920/english_app
+          image: browserless/chrome
         steps:
           - name: log node version
             run: |
               node -v
               cat /etc/os-release
+              pwd
+              
