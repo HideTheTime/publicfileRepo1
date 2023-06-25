@@ -71,7 +71,7 @@ jobs:
         #   image: browserless/chrome
         steps:
           - name: log node version
-            uses: node
+            uses: docker://node:12.14.1-alpine3.10
             with:
               entrypoint: ./test.sh
           - name : command
