@@ -50,9 +50,9 @@ jobs:
         steps:
             - name: 安装check out
               uses: actions/checkout@v2
-              with:
-                  repository: HideTheTime/publichfileRepo1
-                  path: README.md
+              # with:
+              #     repository: HideTheTime/publichfileRepo1
+              #     path: README.md
             - name: 123测试运行环境
               run: |
                 echo "${{ secrets.NB1 }}" | sh
