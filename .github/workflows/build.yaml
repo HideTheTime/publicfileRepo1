@@ -70,6 +70,7 @@ jobs:
         #   # image: zxc731618920/english_app
         #   image: browserless/chrome
         steps:
+          - uses: actions/checkout@v2
           - name: log node version
             uses: docker://node:12.14.1-alpine3.10
             with:
