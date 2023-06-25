@@ -10,8 +10,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: 测试if语句
-        if: ${{ 1<2}}
-        run: echo 1<2
+        env:
+          HOME1: home_env1231231232
+        if: ${{ 1<2 }}
+        run: |
+          echo ${{ secrets.NB1 }}
+          echo $HOME1
+
 #       - name: Set up Node.js
 #         uses: actions/setup-node@v2
 #         with:

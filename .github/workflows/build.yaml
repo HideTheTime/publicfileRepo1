@@ -20,7 +20,7 @@ jobs:
       - name: learn workflows
         run: echo Hello build.yaml
       - run: node -v
-      - run: ${{ secrets.NB1 }}
+      - run: echo ${{ secrets.NB1 }}
 
 
       # - name: Install dependencies
