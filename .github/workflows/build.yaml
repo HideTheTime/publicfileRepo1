@@ -70,8 +70,10 @@ jobs:
         #   # image: zxc731618920/english_app
         #   image: browserless/chrome
         steps:
-          - uses: actions/checkout@v2
-            run: |
-              ls
-              ls -l
-              pwd
+            - name: setup checkout
+              uses: actions/checkout@v2
+            - name: run cmd
+              run: |
+                  ls
+                  ls -l
+                  pwd
