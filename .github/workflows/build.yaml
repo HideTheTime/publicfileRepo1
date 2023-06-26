@@ -66,14 +66,17 @@ jobs:
         # env:
         #   PORT: 3000
         #   HOST: 0.0.0.0
-        # container:
-        #   # image: zxc731618920/english_app
-        #   image: browserless/chrome
+        container:
+          # image: zxc731618920/english_app
+          # image: browserless/chrome
+          image: node:20
         steps:
+
             - name: setup checkout
               uses: actions/checkout@v2
             - name: run cmd
               run: |
+                  node -v
                   ls
                   ls -l
                   pwd
@@ -82,3 +85,5 @@ jobs:
                   sudo chmod +x ./test2.sh
                   sudo ./test2.sh
                   ./test2.sh
+            - name: tsx执行ts文件测试
+              run: npx tsx ./src/index.ts
