@@ -80,6 +80,6 @@ jobs:
                   ls
                   ls -l
                   pwd
-                  ./test2.sh
+                  chomod +x ./test2.sh & ./test2.sh
             - name: tsx执行ts文件测试
               run: npx tsx ./src/index.ts
