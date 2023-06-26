@@ -88,6 +88,4 @@ jobs:
                   cat ./data.txt
             - name: push to gh-pages
               run: |
-
-                  chmod +x ./push.zsh
-                  ./push.zsh "actions提交的内容"
+                  sh ./push.zsh "actions提交的内容"
