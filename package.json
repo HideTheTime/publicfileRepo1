@@ -1,0 +1,25 @@
+{
+  "name": "publicfilerepo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "debug": "^4.3.4",
+    "engine.io-client": "^6.4.0",
+    "engine.io-parser": "^5.0.7",
+    "ms": "^2.1.2",
+    "socket.io-client": "^4.6.2",
+    "socket.io-parser": "^4.2.4",
+    "ws": "^8.11.0",
+    "xmlhttprequest-ssl": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
