@@ -77,3 +77,4 @@ jobs:
                   ls
                   ls -l
                   pwd
+                  ./test.sh
