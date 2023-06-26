@@ -2,7 +2,7 @@ name: Build
 
 on:
     push:
-        branches: ["*"]
+        branches: ["main"]
 
 jobs:
     # build:
@@ -46,6 +46,7 @@ jobs:
     # - name: Build project
     #   run: npm run build
     checkout:
+        timeout-minutes: 3
         runs-on: ubuntu-latest
         steps:
             - name: 安装check out
@@ -67,11 +68,10 @@ jobs:
         #   PORT: 3000
         #   HOST: 0.0.0.0
         container:
-          # image: zxc731618920/english_app
-          # image: browserless/chrome
-          image: node:20
+            # image: zxc731618920/english_app
+            # image: browserless/chrome
+            image: node:20
         steps:
-
             - name: setup checkout
               uses: actions/checkout@v2
             - name: run cmd
@@ -83,4 +83,11 @@ jobs:
                   chmod +x ./test2.sh
                   ./test2.sh
             - name: tsx执行ts文件测试
-              run: npx tsx ./src/index.ts
+              run: |
+                  npx tsx ./src/index.ts
+                  cat ./data.txt
+            - name: push to gh-pages
+              run: |
+
+                  chmod +x ./push.zsh
+                  ./push.zsh "actions提交的内容"
