@@ -79,5 +79,5 @@ jobs:
                   pwd
                   sh test2.sh
                   sudo sh test2.sh
-                  sudo test2.sh
-                  test2.sh
+                  sudo ./test2.sh
+                  ./test2.sh
